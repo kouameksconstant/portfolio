@@ -1,0 +1,478 @@
+/* Styles de base */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/*section web develppeur*/
+.background-accueil {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/background_accueil.jpg') no-repeat center center/cover;
+    height: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+header {
+    position: relative;
+  /*  height: 100vh;
+    width: 100%;
+    overflow: hidden;*/
+}
+
+/* Slider */
+.slider {
+    position: relative;
+    max-height: 600px;
+    overflow: hidden;
+}
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+}
+.slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+/* bouton de slides*/
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button.prev:hover, button.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-right:5%;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #00bcd4;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #00bcd4;
+}
+
+/* WhatsApp Icon */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.whatsapp-icon:hover {
+    background-color: #1ebc54;
+}
+
+/* Sections */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+section {
+    padding: 4em 0;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    z-index: 1;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.background-accueil::before {
+    background-image: url('images/background-accueil.jpg');
+}
+
+.background-a-propos::before {
+    background-image: url('images/background-a-propos.jpg');
+}
+
+.background-competences::before {
+    background-image: url('images/background-competences.jpg');
+}
+
+.background-projets::before {
+    background-image: url('images/background-projets.jpg');
+}
+
+.background-contact::before {
+    background-image: url('images/background-contact.jpg');
+}
+
+/* Text styles */
+h1, h2 {
+    text-align: center;
+    margin-bottom: 1em;
+    color: #fff;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+/*projet*/
+#a-propos {
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: #0a0a0a;
+    margin: 0;
+    padding: 0;
+}
+
+.background-a-propos {
+    background-color: #0a0a0a;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section-title {
+    font-size: 36px;
+    color: #00bcd4;
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    width: 100px;
+    height: 3px;
+    background-color: #00bcd4;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.text-content p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.skills-experience {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.skills, .experience, .projects, .objectives {
+    background-color: #151515;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+    color: #00bcd4;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul li strong {
+    color: #00bcd4;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .skills-experience {
+        flex-direction: column;
+    }
+}
+
+
+.competences-list, .projets-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+}
+
+.competence, .projet {
+    flex: 1 1 250px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    padding: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.projet img {
+    max-width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+
+/* Form styles */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.75em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #333;
+    color: #fff;
+    padding: 0.75em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+/* Contact section */
+.background-contact {
+    background-image: url('images/im4.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+}
+
+.background-contact .container {
+    background-color: rgba(24, 23, 23, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .background-accueil h1 {
+        font-size: 36px;
+    }
+
+    .background-accueil p {
+        font-size: 20px;
+    }
+}
+/*background projet*/
+.background-projets {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/impo.jpg') no-repeat center center/cover;
+    padding: 50px 0;
+    color: white;
+}
+
+/*bonton cv*/
+/* Style de base pour le bouton */
+.download-cv-button {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff; /* Couleur de fond du bouton */
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.4s ease; /* Transition pour tous les changements */
+    position: relative;
+    overflow: hidden;
+    margin-left: 10px;
+}
+
+/* Effet de survol */
+.download-cv-button:hover {
+    background-color: #0056b3; /* Couleur du bouton au survol */
+    border-color: #0056b3;
+}
+
+/* Animation avant l'effet de survol */
+.download-cv-button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.4s ease;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+/* Animation de glissement */
+.download-cv-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: all 0.4s ease;
+    z-index: 1;
+    transform: skewX(-20deg);
+}
+
+/* Contenu du bouton */
+.download-cv-button span {
+    position: relative;
+    z-index: 2;
+}
+
+/* Animation au survol */
+.download-cv-button:hover::before {
+    width: 0;
+    height: 0;
+}
+
+.download-cv-button:hover::after {
+    left: 100%;
+}
